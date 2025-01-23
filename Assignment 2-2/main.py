@@ -3,6 +3,8 @@
 # Output: Your current age followed by your age in 2050
 
 # Create your variables here
+myCurrentAge = 16
+currentYear = 2025
 
 myNewAge = myCurrentAge + (2050 - currentYear)
 print("My Current Age is " + str(myCurrentAge))
