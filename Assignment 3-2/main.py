@@ -3,6 +3,8 @@
 #Output: Accept or Reject
 
 # Get input and convert to correct data type for testScore and classRank
+testScoreString = input("What is the student's test score? ")
+classRankString = input("What is the student's class rank? ")
 
 # Test using admission requirements and print Accept or Reject
 if testScore >= 90:
