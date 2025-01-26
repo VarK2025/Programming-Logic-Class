@@ -33,6 +33,6 @@ elif int(day) < MIN_DAY or int(day) > MAX_DAY: # invalid day
 
 # endOfJob()
 if validDate == True:
-    print("This is a valid date!")
+    print(month + "/" + day + "/" + year + " is a valid date.")
 else:
-    print("This date isn't valid :(")
+    print(month + "/" + day + "/" + year + " is an invalid date.")
