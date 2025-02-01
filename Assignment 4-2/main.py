@@ -16,4 +16,4 @@ else:
   bonus = 50.0
 
 print("Employee Name: " + name)
-print("Employee Bonus: $" + float(bonus))
+print("Employee Bonus: $" + str(bonus))
