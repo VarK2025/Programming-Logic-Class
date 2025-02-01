@@ -8,7 +8,7 @@ charge = 35.00
 # Number of characters.
 numChars = int(input("How many letters do you want? "))
 # Color of characters.
-color = input("What color do you want? )
+color = input("What color do you want? ")
 # Type of wood.
 woodType = input("What kind of wood do you want? ")
 
