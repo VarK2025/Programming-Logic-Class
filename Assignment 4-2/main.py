@@ -1,7 +1,7 @@
 name = input("Enter Employee's name: ")
 numShifts = int(input("Enter Number of Shifts: "))
-numTransactions = input("Enter Number of Transactions: ")
-transactionValue = input("Enter Transaction dollar value: ")
+numTransactions = int(input("Enter Number of Transactions: "))
+transactionValue = int(input("Enter Transaction dollar value: "))
 
 productivityScore = transactionValue / numTransactions / numShifts
 bonus = 0.0
