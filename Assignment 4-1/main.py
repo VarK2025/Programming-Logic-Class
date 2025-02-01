@@ -6,11 +6,11 @@ This program calculates prices for custom house signs.
 # Charge for this sign.
 charge = 35.00
 # Number of characters.
-numChars = 8
+numChars = int(input("How many letters do you want? "))
 # Color of characters.
-color = "gold"
+color = input("What color do you want? )
 # Type of wood.
-woodType = "oak"
+woodType = input("What kind of wood do you want? ")
 
 # Write assignment and if statements here as appropriate.
 if numChars > 5:
