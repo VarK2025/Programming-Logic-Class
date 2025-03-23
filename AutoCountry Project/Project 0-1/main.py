@@ -21,12 +21,14 @@ def onLoad():
 
 def printVehicles():
     print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
+    # Iterate over AllowedVehiclesList and print each item
     for car in AllowedVehiclesList:
         print(car)
     print("")
     onLoad()
 
 def exitProgram():
+    # Print thank-you message
     print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
 
 onLoad()
