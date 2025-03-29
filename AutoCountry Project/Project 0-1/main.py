@@ -1,6 +1,8 @@
-AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan' ] # Program dataset
+# Create Program Data
+AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan' ]
 
-# Function that is run upon execution of the program
+# Define function onLoad that displays menu and gets user input
+# In onLoad: if input is 1 run printVehicles, if input is 2 run exitProgram
 def onLoad():
     print("********************************")
     print("AutoCountry Vehicle Finder v0.1")
@@ -22,19 +24,21 @@ def onLoad():
         case "3":
             exitProgram()
 
+# Define function printVehicles which prints out each item from the Program Data array
+# In printVehicles: run onLoad again
 def printVehicles():
     print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
-    # Iterate over AllowedVehiclesList and print each item
     for vehicle in AllowedVehiclesList:
         print(vehicle)
     print("")
     onLoad()
 
+# Define function searchVehicles:
+# Gets input from user
+# Sets vehicle_is_allowed to False
+# Iterates over AllowedVehiclesList, if input is in the list sets vehicle_is_allowed to True
+# Outputs different messages based on value of vehicle_is_allowed
 def searchVehicles():
-    # Get input from user
-    # Set vehicle_is_allowed to False
-    # Iterate over AllowedVehiclesList, if input is in the list set vehicle_is_allowed to True
-    # Output different messages based on value of vehicle_is_allowed
     vehicle_name = input("Please Enter the full Vehicle name: ")
     vehicle_is_allowed = False
     for vehicle in AllowedVehiclesList:
@@ -47,10 +51,12 @@ def searchVehicles():
         print(vehicle_name + " is not an authorized vehicle, if you received this in error please check the spelling and try again\n")
 
     onLoad()
-    
 
+
+# Define function exitProgram which prints out Good-bye message
+# In exitProgram: Don’t run onLoad again, thereby ending the program
 def exitProgram():
-    # Print thank-you message
     print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
 
+# On execution of program: run onLoad
 onLoad()
