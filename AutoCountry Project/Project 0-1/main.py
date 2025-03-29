@@ -31,6 +31,10 @@ def printVehicles():
     onLoad()
 
 def searchVehicles():
+    # Get input from user
+    # Set vehicle_is_allowed to False
+    # Iterate over AllowedVehiclesList, if input is in the list set vehicle_is_allowed to True
+    # Output different messages based on value of vehicle_is_allowed
     vehicle_name = input("Please Enter the full Vehicle name: ")
     vehicle_is_allowed = False
     for vehicle in AllowedVehiclesList:
@@ -38,9 +42,9 @@ def searchVehicles():
             vehicle_is_allowed = True
 
     if vehicle_is_allowed:
-        pass
+        print(vehicle_name + " is an authorized vehicle")
     else:
-        pass
+        print(vehicle_name + " is not an authorized vehicle, if you received this in error please check the spelling and try again")
     
 
 def exitProgram():
