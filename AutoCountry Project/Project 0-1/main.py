@@ -25,13 +25,23 @@ def onLoad():
 def printVehicles():
     print("The AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
     # Iterate over AllowedVehiclesList and print each item
-    for car in AllowedVehiclesList:
-        print(car)
+    for vehicle in AllowedVehiclesList:
+        print(vehicle)
     print("")
     onLoad()
 
 def searchVehicles():
     vehicle_name = input("Please Enter the full Vehicle name: ")
+    vehicle_is_allowed = false
+    for vehicle in AllowedVehiclesList:
+        if vehicle == vehicle_name:
+            vehicle_is_allowed = true
+
+    if vehicle_is_allowed:
+        pass
+    else:
+        pass
+    
 
 def exitProgram():
     # Print thank-you message
