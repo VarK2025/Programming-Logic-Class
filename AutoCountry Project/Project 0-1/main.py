@@ -32,10 +32,10 @@ def printVehicles():
 
 def searchVehicles():
     vehicle_name = input("Please Enter the full Vehicle name: ")
-    vehicle_is_allowed = false
+    vehicle_is_allowed = False
     for vehicle in AllowedVehiclesList:
         if vehicle == vehicle_name:
-            vehicle_is_allowed = true
+            vehicle_is_allowed = True
 
     if vehicle_is_allowed:
         pass
