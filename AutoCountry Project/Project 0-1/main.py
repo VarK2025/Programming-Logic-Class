@@ -7,16 +7,16 @@ def onLoad():
     print("********************************")
     print("Please Enter the following number below from the following menu:\n")
     print("1. PRINT all Authorized Vehicles")
-    print("2. Exit\n")
+    print("2. SEARCH for Authorized Vehicle")
+    print("3. Exit\n")
     user_input = input()
-    print("")
 
     match user_input:
 
         case "1":
             printVehicles()
 
-        case "2":
+        case "3":
             exitProgram()
 
 def printVehicles():
