@@ -42,9 +42,11 @@ def searchVehicles():
             vehicle_is_allowed = True
 
     if vehicle_is_allowed:
-        print(vehicle_name + " is an authorized vehicle")
+        print(vehicle_name + " is an authorized vehicle\n")
     else:
-        print(vehicle_name + " is not an authorized vehicle, if you received this in error please check the spelling and try again")
+        print(vehicle_name + " is not an authorized vehicle, if you received this in error please check the spelling and try again\n")
+
+    onLoad()
     
 
 def exitProgram():
