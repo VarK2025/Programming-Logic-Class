@@ -16,6 +16,9 @@ def onLoad():
         case "1":
             printVehicles()
 
+        case "2":
+            searchVehicles()
+
         case "3":
             exitProgram()
 
@@ -26,6 +29,9 @@ def printVehicles():
         print(car)
     print("")
     onLoad()
+
+def searchVehicles():
+    vehicle_name = input("Please Enter the full Vehicle name: ")
 
 def exitProgram():
     # Print thank-you message
