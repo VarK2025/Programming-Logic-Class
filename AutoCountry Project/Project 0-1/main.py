@@ -71,9 +71,14 @@ def addVehicle():
 
     onLoad()
 
+# Define function deleteVehicle
+# Gets vehicle name from user
+# Gets confirmation of deletion from user
+# If user confirms deletion, vehicle inputted is removed from AllowedVehiclesList
+# Restates deletion of vehicle
 def deleteVehicle():
     vehicle_name = input("Please Enter the full Vehicle name you would like to REMOVE: ")
-    confirmation = input("Are you sure you want to remove \"" + vehicle_name + "\" from the Authorized Vehicles List?")
+    confirmation = input("Are you sure you want to remove \"" + vehicle_name + "\" from the Authorized Vehicles List?\n")
     if confirmation.lower() == "yes":
         AllowedVehiclesList.remove(vehicle_name)
         print("You have REMOVED \"" + vehicle_name + "\" as an authorized vehicle")
