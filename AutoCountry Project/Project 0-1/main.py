@@ -59,7 +59,9 @@ def searchVehicles():
 def addVehicle():
     vehicle_name = input("Please Enter the full Vehicle name you would like to add: ")
     AllowedVehiclesList.append(vehicle_name)
-    print("You have added \"" + vehicle_name + "\"")
+    print("You have added \"" + vehicle_name + "\" as an authorized vehicle\n")
+
+    onLoad()
 
 # Define function exitProgram which prints out Good-bye message
 # In exitProgram: Don’t run onLoad again, thereby ending the program
