@@ -1,5 +1,5 @@
 # Create Program Data
-AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan' ]
+AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan', 'Rivian R1T', 'Ram 1500']
 
 # Define function onLoad that displays menu and gets user input
 # In onLoad: if input is 1 run printVehicles, if input is 2 run exitProgram
@@ -11,7 +11,8 @@ def onLoad():
     print("1. PRINT all Authorized Vehicles")
     print("2. SEARCH for Authorized Vehicle")
     print("3. ADD Authorized Vehicle")
-    print("4. Exit\n")
+    print("4. DELETE Authorized Vehicle")
+    print("5. Exit\n")
     user_input = input()
 
     match user_input:
@@ -26,6 +27,9 @@ def onLoad():
             addVehicle()
 
         case "4":
+            deleteVehicle()
+
+        case "5":
             exitProgram()
 
 # Define function printVehicles which prints out each item from the Program Data array
@@ -66,6 +70,17 @@ def addVehicle():
     print("You have added \"" + vehicle_name + "\" as an authorized vehicle\n")
 
     onLoad()
+
+def deleteVehicle():
+    vehicle_name = input("Please Enter the full Vehicle name you would like to REMOVE: ")
+    confirmation = input("Are you sure you want to remove \"" + vehicle_name + "\" from the Authorized Vehicles List?")
+    if confirmation.lower() == "yes":
+        AllowedVehiclesList.remove(vehicle_name)
+        print("You have REMOVED \"" + vehicle_name + "\" as an authorized vehicle")
+
+    print("\n")
+    onLoad()
+
 
 # Define function exitProgram which prints out Good-bye message
 # In exitProgram: Don’t run onLoad again, thereby ending the program
