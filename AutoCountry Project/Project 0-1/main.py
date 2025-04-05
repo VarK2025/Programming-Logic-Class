@@ -56,6 +56,10 @@ def searchVehicles():
 
     onLoad()
 
+# Define function addVehicle:
+# Gets input from user
+# Appends input to AllowedVehiclesList
+# Restates user's input
 def addVehicle():
     vehicle_name = input("Please Enter the full Vehicle name you would like to add: ")
     AllowedVehiclesList.append(vehicle_name)
