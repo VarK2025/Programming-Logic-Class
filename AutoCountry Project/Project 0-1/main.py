@@ -10,7 +10,8 @@ def onLoad():
     print("Please Enter the following number below from the following menu:\n")
     print("1. PRINT all Authorized Vehicles")
     print("2. SEARCH for Authorized Vehicle")
-    print("3. Exit\n")
+    print("3. ADD Authorized Vehicle")
+    print("4. Exit\n")
     user_input = input()
 
     match user_input:
@@ -22,6 +23,9 @@ def onLoad():
             searchVehicles()
 
         case "3":
+            addVehicle()
+
+        case "4":
             exitProgram()
 
 # Define function printVehicles which prints out each item from the Program Data array
@@ -52,6 +56,10 @@ def searchVehicles():
 
     onLoad()
 
+def addVehicle():
+    vehicle_name = input("Please Enter the full Vehicle name you would like to add: ")
+    AllowedVehiclesList.append(vehicle_name)
+    print("You have added \"" + vehicle_name + "\"")
 
 # Define function exitProgram which prints out Good-bye message
 # In exitProgram: Don’t run onLoad again, thereby ending the program
