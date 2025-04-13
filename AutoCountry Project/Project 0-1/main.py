@@ -1,9 +1,10 @@
 # Create Program Data
-AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Nissan Titan', 'Rivian R1T', 'Ram 1500']
+AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Rivian R1T', 'Ram 1500']
 
 # Define function onLoad that displays menu and gets user input
 # In onLoad: if input is 1 run printVehicles, if input is 2 run exitProgram
 def onLoad():
+    getDataFromFile()
     print("********************************")
     print("AutoCountry Vehicle Finder v0.1")
     print("********************************")
@@ -91,6 +92,16 @@ def deleteVehicle():
 # In exitProgram: Don’t run onLoad again, thereby ending the program
 def exitProgram():
     print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
+
+def getDataFromFile():
+    new_data_array = []
+    data_file = open("data_file.txt", "r")
+    for line in data_file:
+        new_data_array.append(line)
+    data_file.close()
+    print("New data:")
+    print(new_data_array)
+    return new_data_array
 
 # On execution of program: run onLoad
 onLoad()
