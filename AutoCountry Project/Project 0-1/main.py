@@ -78,7 +78,9 @@ def searchVehicles():
 def addVehicle():
     vehicle_name = input("Please Enter the full Vehicle name you would like to add: ")
     AllowedVehiclesList.append(vehicle_name)
+    writeDataToFile(AllowedVehiclesList, data_file_location)
     print("You have added \"" + vehicle_name + "\" as an authorized vehicle\n")
+
 
     onLoad()
 
@@ -92,6 +94,7 @@ def deleteVehicle():
     confirmation = input("Are you sure you want to remove \"" + vehicle_name + "\" from the Authorized Vehicles List?\n")
     if confirmation.lower() == "yes":
         AllowedVehiclesList.remove(vehicle_name)
+        writeDataToFile(AllowedVehiclesList, data_file_location)
         print("You have REMOVED \"" + vehicle_name + "\" as an authorized vehicle")
 
     print("\n")
@@ -103,6 +106,8 @@ def deleteVehicle():
 def exitProgram():
     print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
 
+# Define function getDataFromFile
+# Reads specified file and returns the lines of the file as an array
 def getDataFromFile(file_path):
     new_data_array = []
     data_file = open(file_path, "r")
@@ -114,6 +119,8 @@ def getDataFromFile(file_path):
     #print(new_data_array)
     return new_data_array
 
+# Define function writeDataToFile
+# Takes an array and writes each item as a separate line into a specified file
 def writeDataToFile(data_arr, file_path):
     data_string = ""
     for item in data_arr:
