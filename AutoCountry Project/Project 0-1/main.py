@@ -1,10 +1,17 @@
+import os
+from pathlib import Path
+
 # Create Program Data
+script_location = Path(__file__).absolute().parent
+data_file_location = script_location / "data_file.txt"
 AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Rivian R1T', 'Ram 1500']
 
 # Define function onLoad that displays menu and gets user input
 # In onLoad: if input is 1 run printVehicles, if input is 2 run exitProgram
 def onLoad():
     getDataFromFile()
+    #print("Current directory")
+    #print(os.getcwd())
     print("********************************")
     print("AutoCountry Vehicle Finder v0.1")
     print("********************************")
@@ -95,9 +102,10 @@ def exitProgram():
 
 def getDataFromFile():
     new_data_array = []
-    data_file = open("data_file.txt", "r")
-    for line in data_file:
-        new_data_array.append(line)
+    data_file = open(data_file_location, "r")
+    #for line in data_file:
+    #    new_data_array.append(line)
+    new_data_array = data_file.read().splitlines()
     data_file.close()
     print("New data:")
     print(new_data_array)
