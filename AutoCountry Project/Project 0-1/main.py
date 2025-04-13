@@ -4,12 +4,11 @@ from pathlib import Path
 # Create Program Data
 script_location = Path(__file__).absolute().parent
 data_file_location = script_location / "data_file.txt"
-AllowedVehiclesList = [ 'Ford F-150', 'Chevrolet Silverado', 'Tesla CyberTruck', 'Toyota Tundra', 'Rivian R1T', 'Ram 1500']
+AllowedVehiclesList = []
 
 # Define function onLoad that displays menu and gets user input
 # In onLoad: if input is 1 run printVehicles, if input is 2 run exitProgram
 def onLoad():
-    getDataFromFile()
     #print("Current directory")
     #print(os.getcwd())
     print("********************************")
@@ -39,6 +38,10 @@ def onLoad():
 
         case "5":
             exitProgram()
+
+        case _:
+            print("Please enter a valid number\n")
+            onLoad()
 
 # Define function printVehicles which prints out each item from the Program Data array
 # In printVehicles: run onLoad again
@@ -100,16 +103,17 @@ def deleteVehicle():
 def exitProgram():
     print("Thank you for using the AutoCountry Vehicle Finder, good-bye!")
 
-def getDataFromFile():
+def getDataFromFile(file_path):
     new_data_array = []
-    data_file = open(data_file_location, "r")
+    data_file = open(file_path, "r")
     #for line in data_file:
     #    new_data_array.append(line)
     new_data_array = data_file.read().splitlines()
     data_file.close()
-    print("New data:")
-    print(new_data_array)
+    #print("New data:")
+    #print(new_data_array)
     return new_data_array
 
-# On execution of program: run onLoad
+# On execution of program: Populate AllowedVehiclesList with data from the file, run onLoad
+AllowedVehiclesList = getDataFromFile(data_file_location)
 onLoad()
