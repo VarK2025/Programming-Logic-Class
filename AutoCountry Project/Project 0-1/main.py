@@ -114,6 +114,14 @@ def getDataFromFile(file_path):
     #print(new_data_array)
     return new_data_array
 
+def writeDataToFile(data_arr, file_path):
+    data_string = ""
+    for item in data_arr:
+        data_string += str(item) + "\n"
+    data_file = open(file_path, "w")
+    data_file.write(data_string)
+    data_file.close()
+
 # On execution of program: Populate AllowedVehiclesList with data from the file, run onLoad
 AllowedVehiclesList = getDataFromFile(data_file_location)
 onLoad()
