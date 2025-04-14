@@ -75,6 +75,7 @@ def searchVehicles():
 # Gets input from user
 # Appends input to AllowedVehiclesList
 # Restates user's input
+# Saves the updated AllowedVehiclesList to the data file
 def addVehicle():
     vehicle_name = input("Please Enter the full Vehicle name you would like to add: ")
     AllowedVehiclesList.append(vehicle_name)
@@ -89,6 +90,7 @@ def addVehicle():
 # Gets confirmation of deletion from user
 # If user confirms deletion, vehicle inputted is removed from AllowedVehiclesList
 # Restates deletion of vehicle
+# Saves the updated AllowedVehiclesList to the data file
 def deleteVehicle():
     vehicle_name = input("Please Enter the full Vehicle name you would like to REMOVE: ")
     if vehicle_name in AllowedVehiclesList:
