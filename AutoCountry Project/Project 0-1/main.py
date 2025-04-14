@@ -111,12 +111,8 @@ def exitProgram():
 def getDataFromFile(file_path):
     new_data_array = []
     data_file = open(file_path, "r")
-    #for line in data_file:
-    #    new_data_array.append(line)
     new_data_array = data_file.read().splitlines()
     data_file.close()
-    #print("New data:")
-    #print(new_data_array)
     return new_data_array
 
 # Define function writeDataToFile
