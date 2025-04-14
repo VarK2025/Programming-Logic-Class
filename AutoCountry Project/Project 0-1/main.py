@@ -8,8 +8,6 @@ AllowedVehiclesList = []
 # Define function onLoad that displays menu and gets user input
 # In onLoad: if input is 1 run printVehicles, if input is 2 run exitProgram
 def onLoad():
-    #print("Current directory")
-    #print(os.getcwd())
     print("********************************")
     print("AutoCountry Vehicle Finder v0.5")
     print("********************************")
